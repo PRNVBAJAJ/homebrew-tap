@@ -5,28 +5,28 @@
 class Context < Formula
   desc "Local-first runtime for AI-assisted engineering"
   homepage "https://github.com/PRNVBAJAJ/context-os"
-  version "0.1.1"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/PRNVBAJAJ/context-os/releases/download/v0.1.1/context_0.1.1_darwin_amd64.tar.gz"
-      sha256 "28f473c55c53ce5f36c8accb15c3fefe7b3ba885f589110d5a358fe84b7f7b36"
+      url "https://github.com/PRNVBAJAJ/context-os/releases/download/v0.2.0/context_0.2.0_darwin_amd64.tar.gz"
+      sha256 "51e593610ae9944174b81eeb39254635e3cc8ae67555dbd5ce948d1701fe19ad"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/PRNVBAJAJ/context-os/releases/download/v0.1.1/context_0.1.1_darwin_arm64.tar.gz"
-      sha256 "305b7786e310b015cc2dd3559c087f49be87dc7058788001f61c9f30a7e8a22d"
+      url "https://github.com/PRNVBAJAJ/context-os/releases/download/v0.2.0/context_0.2.0_darwin_arm64.tar.gz"
+      sha256 "e445f2e4979b5e0c2a1dda7e7961504f4bc60b7e6fbb6033c931fc1356e2edee"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/PRNVBAJAJ/context-os/releases/download/v0.1.1/context_0.1.1_linux_amd64.tar.gz"
-      sha256 "439cbaa744b011b041ab43d191bb1213c0ed2c229d4de7e17ace1df80d619468"
+      url "https://github.com/PRNVBAJAJ/context-os/releases/download/v0.2.0/context_0.2.0_linux_amd64.tar.gz"
+      sha256 "619b34a2ca9591fd20c548d581f7ac1e6982f88b936e972730de342f3fa995bd"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/PRNVBAJAJ/context-os/releases/download/v0.1.1/context_0.1.1_linux_arm64.tar.gz"
-      sha256 "c31efed8bfb14a8e18fda8adeba11941a1a81d3c42297b0b98390a0b31f30617"
+      url "https://github.com/PRNVBAJAJ/context-os/releases/download/v0.2.0/context_0.2.0_linux_arm64.tar.gz"
+      sha256 "d45edc09bc0ac80a1520af1631ddc975c1abe5c904893f17df514a97c4d24088"
     end
   end
 
@@ -35,6 +35,6 @@ class Context < Formula
   end
 
   test do
-    system "#{bin}/context", "--version"
+    system "\#{bin}/context", "--version"
   end
 end

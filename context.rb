@@ -5,21 +5,21 @@
 class Context < Formula
   desc "Local-first runtime for AI-assisted engineering"
   homepage "https://github.com/PRNVBAJAJ/context-os"
-  version "0.1.4"
+  version "0.1.5"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/PRNVBAJAJ/context-os/releases/download/v0.1.4/context_0.1.4_darwin_amd64.tar.gz"
-      sha256 "1c527436b8e845945acbe8163d786bc32582aa3b83fd4196bce103f46316593f"
+      url "https://github.com/PRNVBAJAJ/context-os/releases/download/v0.1.5/context_0.1.5_darwin_amd64.tar.gz"
+      sha256 "19a8c8a8b4f45d3e1474c277f6f8321cc9035da84dbd4352993f264ea33a9a62"
 
       define_method(:install) do
         bin.install "context"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/PRNVBAJAJ/context-os/releases/download/v0.1.4/context_0.1.4_darwin_arm64.tar.gz"
-      sha256 "cc10ff88d87e1b68153e3e372e16e2c2759186f70356228cb3d222a3de877ba7"
+      url "https://github.com/PRNVBAJAJ/context-os/releases/download/v0.1.5/context_0.1.5_darwin_arm64.tar.gz"
+      sha256 "99ae105c9751985646efd0a2656fcad21ebf2a2ac1e65d74abb56ff733bca85c"
 
       define_method(:install) do
         bin.install "context"
@@ -29,15 +29,15 @@ class Context < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/PRNVBAJAJ/context-os/releases/download/v0.1.4/context_0.1.4_linux_amd64.tar.gz"
-      sha256 "0724828a73643dd993e35fb0659749d6734599449a90b607ad2e8bb2f3fa1aa1"
+      url "https://github.com/PRNVBAJAJ/context-os/releases/download/v0.1.5/context_0.1.5_linux_amd64.tar.gz"
+      sha256 "e181d2b885fb9fc86ea8bdf075c11b4d0d6711a3cbb0adef7a0b8934aa7c2755"
       define_method(:install) do
         bin.install "context"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/PRNVBAJAJ/context-os/releases/download/v0.1.4/context_0.1.4_linux_arm64.tar.gz"
-      sha256 "ae46bdafb59a1ba2a01c3557085df41dd195611f09696428ee18c58ea36fb173"
+      url "https://github.com/PRNVBAJAJ/context-os/releases/download/v0.1.5/context_0.1.5_linux_arm64.tar.gz"
+      sha256 "943f8dcb2f5cda6503f56ada12438363bc532412406049df3ff60fba8cbb3e6c"
       define_method(:install) do
         bin.install "context"
       end
